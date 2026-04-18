@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All About Me</title>
+
+    <link rel="stylesheet" href="styling.css">
+</head>
+
+<body>
+
+<h1 class="header">All About Me (DangerEditz)</h1>
+
+<button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+<div class="container">
+
+    <!-- CODING CARD -->
+    <div class="card" onclick="openPopup('codingPopup')">
+        <img src="CSSSS.png" alt="Coding">
+        <h2>Coding</h2>
+        <p>My coding projects and learning journey.</p>
+    </div>
+
+    <!-- GAMING CARD -->
+    <div class="card" onclick="openPopup('gamingPopup')">
+        <img src="GamingSS.png" alt="Gaming">
+        <h2>Gaming</h2>
+        <p>Games I play and enjoy.</p>
+    </div>
+
+    <!-- EDITING CARD -->
+    <div class="card" onclick="openPopup('editingPopup')">
+        <img src="EditingSS.png" alt="Editing">
+        <h2>Editing</h2>
+        <p>My car edits and creative work.</p>
+    </div>
+
+</div>
+
+<!-- ===== CODING POPUP ===== -->
+<div id="codingPopup" class="popup">
+
+    <div class="popup-pattern"></div>
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup('codingPopup')">✖</span>
+
+        <img src="CSSSS.png" class="popup-img" alt="Coding">
+
+        <h2>Coding</h2>
+
+        <div class="hover-grid">
+
+            <div class="hover-card">
+                <h3>How I got interested</h3>
+                <p>
+                    I started coding because I kept seeing videos online showing people building cool projects,
+                    programs, and all kinds of creative things with code. It made me really curious about how everything
+                    works behind the scenes and how powerful coding actually is.
+                </p>
+            </div>
+
+            <div class="hover-card">
+                <h3>What pushed me further</h3>
+                <p>
+                    I saw content about software security and how systems work behind the scenes. It made me want to
+                    understand how programs are built and controlled.
+                </p>
+            </div>
+
+            <div class="hover-card">
+                <h3>My brother’s impact</h3>
+                <p>
+                    My brother helped me get started with coding and gave me guidance on where to begin, which made
+                    everything way less confusing.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ===== GAMING POPUP ===== -->
+<div id="gamingPopup" class="popup">
+
+    <div class="popup-pattern"></div>
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup('gamingPopup')">✖</span>
+
+        <img src="GamingSS.png" class="popup-img" alt="Gaming">
+
+        <h2>Gaming</h2>
+
+        <div class="hover-grid">
+
+            <div class="hover-card">
+                <h3>How it started</h3>
+                <p>
+                    I started gaming back in 2020 when I was sharing a PS4 with my brother.
+                    That’s where everything began.
+                </p>
+            </div>
+
+            <div class="hover-card">
+                <h3>Getting into gaming</h3>
+                <p>
+                    Over time I played more often and got really into different games and styles.
+                </p>
+            </div>
+
+            <div class="hover-card">
+                <h3>Where I am now</h3>
+                <p>
+                    I eventually got my own computer, which changed everything for me.
+                    Now I can play and create freely.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- ===== EDITING POPUP ===== -->
+<div id="editingPopup" class="popup">
+
+    <div class="popup-pattern"></div>
+
+    <div class="popup-content">
+
+        <span class="close" onclick="closePopup('editingPopup')">✖</span>
+
+        <img src="EditingSS.png" class="popup-img" alt="Editing">
+
+        <h2>Editing</h2>
+
+        <div class="hover-grid">
+
+            <div class="hover-card">
+                <h3>Getting Started</h3>
+                <p>
+                    I started editing after seeing creators like AidenEdits online.
+                </p>
+            </div>
+
+            <div class="hover-card">
+                <h3>Learning Process</h3>
+                <p>
+                    I learned transitions, timing, and effects after getting my computer.
+                </p>
+            </div>
+
+            <div class="hover-card">
+                <h3>Goals & Future</h3>
+                <p>
+                    I’m still improving and working toward professional-level editing.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+function openPopup(id) {
+    const popup = document.getElementById(id);
+    popup.style.display = "block";
+
+    setTimeout(() => {
+        popup.classList.add("show");
+    }, 10);
+}
+
+function closePopup(id) {
+    const popup = document.getElementById(id);
+    popup.classList.remove("show");
+
+    setTimeout(() => {
+        popup.style.display = "none";
+    }, 200);
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
